@@ -1,0 +1,107 @@
+:root {
+    --primary: #4a6fa5;
+    --error: #e74c3c;
+    --success: #2ecc71;
+    --gray: #f0f0f0;
+    --dark-gray: #777;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.error {
+    color: var(--error);
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    height: 18px;
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3a5a8c;
+}
+
+.success-message {
+    background-color: var(--success);
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+/* Validation states */
+input.invalid, textarea.invalid {
+    border-color: var(--error);
+}
+
+input.valid, textarea.valid {
+    border-color: var(--success);
+}
